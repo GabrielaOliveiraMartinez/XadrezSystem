@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Tabuleiro
+namespace tabuleiro
 {
     public class Tabuleiro
     {
@@ -18,6 +18,11 @@ namespace Tabuleiro
             this.linhas = linhas;
             this.colunas = colunas;
             _pecas = new Peca[linhas, colunas];
+        }
+
+        public Peca peca(int linha,int coluna)
+        {
+            return _pecas[linha,coluna];
         }
     }
 }
