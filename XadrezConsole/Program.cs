@@ -23,6 +23,15 @@ class Program
                 Posicao origem = Tela.lerPosicaoXadrez().toPosicao();
 
 
+                bool[,] posicoesPossiveis = partidaDeXadrez.tab.peca(origem).MovimentosPossiveis();
+
+
+
+                Console.Clear();
+
+                Tela.ImprimirTabuleiro(partidaDeXadrez.tab, posicoesPossiveis);
+
+                Console.WriteLine();
 
                 Console.WriteLine("Destino: ");
                 Posicao destino = Tela.lerPosicaoXadrez().toPosicao();
